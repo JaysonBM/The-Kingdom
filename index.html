@@ -4,8 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="The Kingdom" content="width=device-width, initial-scale=1.0">
-        <title>The Kingdom</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>the kingdom</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/styles.css" type="text/css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +16,11 @@
     <body>
         <div class="container">
             <header>
-                <h1><a>THE KINGDOM</a></h1>
+                <h1>THE KINGDOM</h1>
             </header>
             <nav>
                 <ul>
+                    <li class="drop-down"><a href="#"><i class="fa fa-bars"></i></a></li>
                     <li><a href="">Home</a></li>
                     <li><a href="">Merchandise</a></li>
                     <li><a href="">About us</a></li>                
@@ -56,20 +58,24 @@
             </section>
             <section class="gallery">
                 <div class="images">
-                    <div>
+                    <div class="image-content">
                         <img src="images/shirt.jpg">
+                        <div class="gradient"></div>
                         <h4>Shirts</h4>
                     </div>
-                    <div>
+                    <div class="image-content">
                         <img src="images/sweater.jpg">
+                        <div class="gradient"></div>
                         <h4>Sweaters</h4>
                     </div>
-                    <div>
+                    <div class="image-content">
                         <img src="images/pants.jpg">
+                        <div class="gradient"></div>
                         <h4>Bottoms</h4>
                     </div>
-                    <div>
+                    <div class="image-content">
                         <img src="images/hat.jpg">
+                        <div class="gradient"></div>
                         <h4>Hats</h4>
                     </div>
                 </div>
@@ -81,4 +87,6 @@
             </footer>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </html>

@@ -48,6 +48,10 @@ nav a:hover {
     color: rgb(255, 255, 255);
 }
 
+.drop-down {
+    display: none;
+}
+
 .hero {
     height: 50vh;
     background-image: url(../images/magnus-andersson-dZJorqZxpYA-unsplash.jpg);
@@ -76,6 +80,7 @@ nav a:hover {
     border-radius: 7px;
     padding: 4px 10px;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .hero button:hover {
@@ -92,6 +97,7 @@ section {
     height: 300px;
     width: 30%;
     object-fit: cover;
+    margin: 50px;
 }
 
 .products h3 {
@@ -99,22 +105,26 @@ section {
     font-weight: bold;
 }
 
+.product-text {
+    padding: 0 50px;
+}
+
 
 .product {
     background-color: #0f0f0f;
     display: flex;
     margin: auto;
-    padding: 20vh 0;
-    justify-content: space-evenly;
+    padding: 10vh 0;
+    justify-content: center;
     align-items: center;
 }
 
 .product2 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 20vh 0;
+    padding: 10vh 0;
 }
 
 .images {
@@ -124,7 +134,11 @@ section {
     padding: 50px 0;
 }
 
-.images div {
+.images {
+    position: relative;
+}
+
+.image-content {
     position: relative;
 }
 
@@ -135,26 +149,126 @@ section {
 }
 
 .images h4 {
+    font-size: 2.2rem;
     position: absolute;
     left: 50%;
     top: 50%;
     text-shadow: 2px 2px 2px black;
+    transform: translate(-50%, -50%);
 }
 
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .gradient:hover {
+    opacity: 1;
+  }
+
+  footer {
+    padding-bottom: 5px;
+  }
+
 @media screen and (max-width: 64em){
-    .product {    
-        display: block;
-    }
+
   }
 
 @media screen and (max-width: 48em){
+    header {
+        padding: 0%;
+        padding-top: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
     .product {    
-        display: flex;
+        display: block;
+        padding: 0;
+    }
+
+    .product2 {    
+        display: block;
+        padding: 0;
+    }
+
+    .products img {
+        height: 50vh;
+        width: 80%;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .product-text {
+        padding: 15px 0;
+    }
+    
+    .images h4 {
+        font-size: 1rem;
     }
   }
 
+  /* Tablet */
 @media screen and (max-width: 30em){
-    .product {
+    header {
+        padding: 0%;
+        padding-top: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .drop-down {
         display: block;
     }
-  }
+
+    nav {
+        height: 2.4rem;
+        overflow: hidden;
+        padding: 5px;
+        padding-bottom: 0;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+    .nav-expanded {
+        height: auto; 
+    }
+
+    nav li {
+        text-align: left;
+        flex-basis: 100%;
+        padding: 4px 0;
+    }
+
+    .fa {
+        font-size: 20px;
+    }
+
+    .images {
+        grid-template-columns: 1fr;
+    }
+
+    .products img {
+        margin: 0;
+        width: 80%;
+        padding: 3vh 0;
+    }
+
+    .product-text {
+        padding: 0;
+    }
+}
