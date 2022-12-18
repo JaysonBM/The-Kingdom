@@ -27,6 +27,10 @@ header h1 {
     letter-spacing: 1px;
 }
 
+header h1 a {
+    text-decoration: none;
+    color: rgb(210, 210, 210);}
+
 nav {
     padding: 20px 0px;
     padding-bottom: 40px;
@@ -53,7 +57,7 @@ nav a:hover {
 }
 
 .hero {
-    height: 50vh;
+    height: 80vh;
     background-image: url(../images/magnus-andersson-dZJorqZxpYA-unsplash.jpg);
     background-size: cover;
     background-position: center;
@@ -119,12 +123,8 @@ section {
     align-items: center;
 }
 
-.product2 {
-    display: flex;
+.reverse {
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0;
 }
 
 .images {
@@ -176,9 +176,106 @@ section {
     padding-bottom: 5px;
   }
 
-@media screen and (max-width: 64em){
+/* Merch page */
 
-  }
+.promo {
+     background-color: black;
+     padding: 8px;
+}
+
+.product-hero {
+    padding: 3rem;
+    background-image: url(../images/TheKingdom_Emblem_RGB_Primary.png);
+    background-position: 50% 20%;
+    background-color: #101010;    
+    background-repeat: no-repeat;
+    height: 53vh;
+}
+
+.product-hero h2 {
+    position: relative;
+    top: 93%;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.tee-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    width: auto;
+    margin: auto;
+    padding: 3rem;
+}
+
+
+.tee-products img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+/* About us page */
+
+.title {
+    margin: 20px;
+    border-top: solid 2.5px rgb(15, 15, 15);
+    padding: 8vh 0;
+}
+
+.founder {
+    background-color: #0f0f0f;
+    padding: 3rem 0 2rem 0;
+}
+
+.founder img {
+    border-radius: 100%;
+    height: 25vh;
+    width: 25vh;
+    object-fit: cover;
+    margin: 2.5rem 0 2rem 0;
+}
+
+.description {
+    margin: 23vh 0;
+}
+
+.description p {
+    font-size: 14px;
+    padding: 5rem 20rem;
+}
+
+.contact {
+    background-color: #0f0f0f;
+    padding-bottom: 5vh;
+}
+
+.contact h1 {
+    padding: 2rem 0;
+}
+
+.textbox {
+    padding: .5rem;
+}
+
+input {
+    margin: 5px;
+}
+
+.contact-message {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    border: solid 2px whitesmoke;
+    border-radius: 17px;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
 
 @media screen and (max-width: 48em){
     header {
@@ -188,6 +285,10 @@ section {
 
     header h1 {
         font-size: 2.2rem;
+    }
+
+    .hero {
+        height: 50vh;
     }
 
     .product {    
@@ -214,9 +315,20 @@ section {
     .images h4 {
         font-size: 1rem;
     }
+
+    .tee-products {
+        grid-template-columns: 1fr 1fr;
   }
 
-  /* Tablet */
+    .description p {
+        padding: 4rem 8rem;
+}
+
+    .description {
+        margin: 14vh 0;
+}
+
+  /* Mobile */
 @media screen and (max-width: 30em){
     header {
         padding: 0%;
@@ -258,6 +370,14 @@ section {
         font-size: 20px;
     }
 
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content {
+        height: 65%;
+    }
+
     .images {
         grid-template-columns: 1fr;
     }
@@ -270,5 +390,33 @@ section {
 
     .product-text {
         padding: 0;
+    }
+
+    /* Merch page */
+
+    .product-hero {
+        background-size: 100%;
+        height: 24vh;
+        background-position: center;
+    }
+
+    .product-hero h2 {
+        top: 25%;
+    }
+
+    .tee-products {
+        gap: .7rem;
+        padding: 1.2rem;
+    }
+
+    .title {
+        margin: 5px;
+        border-top: solid 2.5px rgb(15, 15, 15);
+        padding: 4vh 0;
+    }
+
+    .founder {
+        background-color: #0f0f0f;
+        padding: 2rem 0 2rem 0;
     }
 }
